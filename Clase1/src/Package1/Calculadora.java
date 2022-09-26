@@ -1,0 +1,136 @@
+package Package1;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+
+public class Calculadora {
+	public static void main(String[] args) throws IOException {
+	BufferedReader reader =
+			new BufferedReader(new InputStreamReader(System.in));
+	
+	int opcion = 0;
+	int seguir = 0;
+	String lecturaConsola = "";
+	int num1,num2;
+	do {
+		System.out.println("Indica la opción");
+		System.out.println("1.-Suma");
+		System.out.println("2.-Resta");
+		System.out.println("3.-Multiplicacion");
+		System.out.println("4.-Division");
+		System.out.println("5.-Factorial");
+		System.out.println("6.-Salir");
+	
+		lecturaConsola = reader.readLine();
+		opcion = Integer.parseInt(lecturaConsola);
+
+	switch (opcion) {
+	case 1 :
+				System.out.println("Ingresa el primer numero");
+				lecturaConsola = reader.readLine();
+				num1 = Integer.parseInt(lecturaConsola);
+				System.out.println("Ingresa el segundo numero");
+				lecturaConsola = reader.readLine();
+				num2 = Integer.parseInt(lecturaConsola);
+				
+				System.out.print("La suma es ");
+				System.out.println(num1+num2);
+				System.out.println("");
+				
+				System.out.println("Desea hacer otra operacion?");
+				System.out.println("Ingrese 1 si asi lo desea");
+				lecturaConsola = reader.readLine();
+				seguir = Integer.parseInt(lecturaConsola);
+			break;
+	case 2 :
+				System.out.println("Ingresa el primer numero");
+				lecturaConsola = reader.readLine();
+				num1 = Integer.parseInt(lecturaConsola);
+				System.out.println("Ingresa el segundo numero");
+				lecturaConsola = reader.readLine();
+				num2 = Integer.parseInt(lecturaConsola);
+				
+				System.out.print("La resta es ");
+				System.out.println(num1-num2);
+				System.out.println("");
+				
+				System.out.println("Desea hacer otra operacion?");
+				System.out.println("Ingrese 1 si asi lo desea");
+				lecturaConsola = reader.readLine();
+				seguir = Integer.parseInt(lecturaConsola);
+			break;
+	case 3 :
+				System.out.println("Ingresa el primer numero");
+				lecturaConsola = reader.readLine();
+				num1 = Integer.parseInt(lecturaConsola);
+				System.out.println("Ingresa el segundo numero");
+				lecturaConsola = reader.readLine();
+				num2 = Integer.parseInt(lecturaConsola);
+				
+				System.out.print("La multiplicacion es ");
+				System.out.println(num1*num2);
+				System.out.println("");
+				
+				System.out.println("Desea hacer otra operacion?");
+				System.out.println("Ingrese 1 si asi lo desea");
+				lecturaConsola = reader.readLine();
+				seguir = Integer.parseInt(lecturaConsola);
+			break;
+	case 4 :
+				System.out.println("Ingresa el primer numero");
+				lecturaConsola = reader.readLine();
+				num1 = Integer.parseInt(lecturaConsola);
+				System.out.println("Ingresa el segundo numero");
+				lecturaConsola = reader.readLine();
+				num2 = Integer.parseInt(lecturaConsola);
+				
+				System.out.print("La division es ");
+				System.out.println(num1/num2);
+				System.out.println("");
+				
+				System.out.println("Desea hacer otra operacion?");
+				System.out.println("Ingrese 1 si asi lo desea");
+				lecturaConsola = reader.readLine();
+				seguir = Integer.parseInt(lecturaConsola);
+		break;
+	case 6 :
+				System.out.print("Adios, vuelva pronto");
+				System.exit(0);
+			break;
+	case 5 :
+		System.out.println("Ingresa elnumero");
+		lecturaConsola = reader.readLine();
+		num1 = Integer.parseInt(lecturaConsola);
+		int factorial[]= new int[num1];
+		for(int i = 0; i<factorial.length; i++)
+		{
+			factorial[i] = i + 1;
+		}
+		int aux = 1;
+		for(int i = 0; i<factorial.length; i++)
+		{
+			aux = aux *  factorial[i];
+			System.out.print(aux +" * " + factorial [i]);
+		}
+		
+		
+		System.out.println("\nDesea hacer otra operacion?");
+		System.out.println("Ingrese 1 si asi lo desea");
+		lecturaConsola = reader.readLine();
+		seguir = Integer.parseInt(lecturaConsola);
+		break;
+	default :
+		System.out.print("Opcion no valida");
+		System.out.println("Desea hacer una operacion?");
+		System.out.println("Ingrese 1 si asi lo desea");
+		lecturaConsola = reader.readLine();
+		seguir = Integer.parseInt(lecturaConsola);
+			}
+	}while (seguir == 1);
+	System.out.println("Adios");
+	System.exit(0);
+    }
+}

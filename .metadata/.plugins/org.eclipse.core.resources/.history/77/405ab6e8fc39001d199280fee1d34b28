@@ -1,0 +1,14 @@
+package Package1;
+
+public class Animal {
+
+		String familia;
+		boolean alas;
+		public Animal(String familia, boolean alas) {
+			super();
+			this.familia = familia;
+			this.alas = alas;
+		}
+		
+		
+}
